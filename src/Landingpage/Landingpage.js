@@ -1,8 +1,18 @@
 import React from 'react'
+import Landingpageheader from './Landingpagecontent/Landingpageheader'
+import Landingpagecontects from './Landingpagecontent/Landingpagecontects'
+import "../Landingpage/Landingpage.css"
 
 const Landingpage = () => {
   return (
-    <div>Landingpage</div>
+    <div>
+      <div>
+        <Landingpageheader />
+      </div>
+      <div>
+        <Landingpagecontects />
+      </div>
+    </div>
   )
 }
 

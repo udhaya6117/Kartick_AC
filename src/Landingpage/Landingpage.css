@@ -1,0 +1,136 @@
+.header-btn{
+    margin-left: 30px;
+    background: #e03a3c;
+    color: #fff;
+    border-radius: 4px;
+    padding: 8px 25px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    display: inline-block;
+    font-family: "Poppins-Regular";
+}
+.hero-box{
+    z-index: 11111;
+}
+
+.hero-img h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    font-family: "Poppins-Bold";
+  }
+  
+  .hero-img h2 {
+    color: #fff;
+    margin: 10px 0 0 0;
+    font-size: 24px;
+    font-family: "Poppins-SemiBold";
+  }
+  
+  .hero-img .btn{
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 4px;
+    transition: 0.5s;
+    margin-top: 30px;
+    color: #fff;
+    background: #e03a3c;
+    border: 2px solid #e03a3c;
+    font-family: "Poppins-Regular";
+  }
+  
+  .hero-img .btn:hover {
+    background: transparent;
+    border-color: #fff;
+    cursor: pointer;
+  }
+  
+
+/* Landingpage content */
+
+.hero-img {
+    width: 100%;
+    height: 85vh;
+    background: url("../img/hero-img.jpg") top center ;
+    background-size: cover;
+    position: relative;
+    padding-top: 0px;
+  }
+
+  .hero-img::after {
+    content: "";
+    background: rgba(4, 12, 25, 0.5);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .hero-img .hero-container{
+    position: absolute;
+    width: 50%;
+    z-index: 9;
+    top:20%;
+    left: 5%;
+  }
+
+  .Aboutus{
+    margin-top: 30px;
+  }
+  .aboutus-box{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .aboutus-box .about-box-1{
+    padding-right: 20px;
+  }
+
+  .aboutus-box .about-box-1 h3{
+    font-weight: 600;
+    font-size: 24px;
+    font-family: "Poppins-SemiBold";
+    color: #444444;
+    margin-bottom: 0.5rem;
+  }
+
+  .aboutus-box .about-box-1 p{
+    font-style: italic;
+    font-family: "Poppins-Regular";
+    margin-top: 0px;
+  }
+  .aboutus-box .about-box-1 .aboutus-contecnt-box-1{
+    font-family: "Poppins-Regular";
+    margin-top: 0px;
+    font-size: 14px;
+    font-style: normal;
+  }
+  .aboutus-box .about-box-1 ul{
+    padding-left: 20px;
+  }
+  .aboutus-box .about-box-1 ul li {
+    font-family: "Poppins-Regular";
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+  }
+  .aboutus-box .about-box-2{
+    display: flex;
+    justify-content: center;
+  }
+
+  .points-box{
+    margin-top: 50px;
+  }
