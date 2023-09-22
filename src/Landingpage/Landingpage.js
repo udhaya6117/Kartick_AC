@@ -6,9 +6,10 @@ import "../Landingpage/Landingpage.css"
 const Landingpage = () => {
   return (
     <div>
-      <div>
+      
+      <div style={{position:"fixed",zIndex:"99999",width:"100%"}}>
         <Landingpageheader />
-      </div>
+        </div>
       <div>
         <Landingpagecontects />
       </div>

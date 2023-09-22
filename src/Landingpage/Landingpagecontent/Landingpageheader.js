@@ -117,7 +117,7 @@ const Landingpageheader = () => {
             >
               HOME SERVICE
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" },justifyContent:"flex-end" }}>
+            <Box className="header-btn-simple" sx={{ flexGrow: 1, display: { xs: "none", md: "flex" },justifyContent:"flex-end",gap:"20px" }} >
               {pages.map((page) => (
                 <Button
                   key={page}
