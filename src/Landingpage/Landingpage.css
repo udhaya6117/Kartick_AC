@@ -8,13 +8,41 @@
   transition: 0.3s;
   font-size: 14px;
   font-weight: 600;
-  border: none;
+  border: 2px solid #e03a3c;
   display: inline-block;
   font-family: "Poppins-Regular";
+  cursor: pointer;
+}
+.header-btn:hover {
+  background: transparent;
+    border-color: #e03a3c ;
+    color: #e03a3c;
+    cursor: pointer;
+}
+.header-btn-icon{
+  display: none !important;
+}
+.sumbit-contactus{
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #e03a3c;
+  border: 2px solid #e03a3c;
+  font-family: "Poppins-Regular";
+}
+.sumbit-contactus:hover{
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .header-btn-simple button:hover {
   color: #e03a3c;
+  
 }
 .hero-box {
   z-index: 11111;
@@ -82,7 +110,7 @@
   position: absolute;
   width: 50%;
   z-index: 9;
-  top: 20%;
+  top: 25%;
   left: 5%;
 }
 
@@ -388,14 +416,17 @@
   z-index: 1111;
 }
 
-
+.contactusform .MuiOutlinedInput-root {
+  border-radius: 0% !important;
+  width: 350px !important;
+}
 
 
 @media only screen and (min-width: 350px) and (max-width:767px){
   
   .hero-top-maincontect{
     width: 100%;
-    padding-top: 70px;
+    padding-top: 70px !important;
   }
   
   .aboutus-box{
@@ -434,7 +465,6 @@
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 1px;
-    display: inline-block;
     padding: 10px 30px;
     border-radius: 4px;
     transition: 0.5s;
@@ -444,12 +474,55 @@
     border: 2px solid #e03a3c;
     font-family: "Poppins-Regular";
   }
+  
+ .header-btn{
+  display: none;
+ }
+ .header-btn-icon{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  background-color: #e03a3c !important;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+ }
+
   .hero-img .hero-container {
     position: absolute;
-    width: 100%;
+    width: 70%;
     z-index: 9;
-    top: 20%;
+    top: 30%;
     left: 5%;
   }
+  .contactusform .MuiOutlinedInput-root{
+    width: 250px !important;
+  }
+}
 
+@media only screen and (min-width: 767px) and (max-width:1023px){
+  .aboutus-box{
+    grid-template-columns: 100%;
+  }
+  .points-box .points-box-split{
+    grid-template-columns: 50% 50%;
+  }
+  .services-boxes-splits{
+    grid-template-columns: 50% 50%;
+  }
+  .footer .footer-box-split-1 {
+    grid-template-columns: 50% 25% 25%;
+  }
+  .header-btn{
+    display: none;
+   }
+  .header-btn-icon{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background-color: #e03a3c !important;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+   }
 }

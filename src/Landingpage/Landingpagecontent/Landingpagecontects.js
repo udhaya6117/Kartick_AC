@@ -1,5 +1,5 @@
-import { Container } from "@mui/material";
-import React from "react";
+import { Button, Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField } from "@mui/material";
+import React, { useState } from "react";
 import DoneAllIcon from "@mui/icons-material/DoneAll";
 import aboutsimg from "../../../src/img/aboutus-img.jpg";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
@@ -18,10 +18,22 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { motion } from "framer-motion";
 
-const Landingpagecontects = () => {
+
+
+
+const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <div>
-      <div className="hero-top-maincontect" style={{ paddingTop: "75px",width:"100%" }}>
+      <div ref={Home} className="hero-top-maincontect" style={{ paddingTop: "75px",width:"100%" }}>
         <div className="hero-img">
           <div className="hero-container">
            
@@ -56,6 +68,7 @@ const Landingpagecontects = () => {
                 ease: [0, 0.71, 0.2, 1.01],
               }}
               class="btn"
+              onClick={handleClickOpen}
             >
               Get Started
             </motion.button>
@@ -75,7 +88,7 @@ const Landingpagecontects = () => {
           />
         </div>
       </div>
-      <div className="Aboutus">
+      <div ref={About} className="Aboutus">
         <Container>
           <div className="aboutus-box">
             <motion.div
@@ -230,7 +243,7 @@ const Landingpagecontects = () => {
           </div>
         </Container>
       </div>
-      <div className="services">
+      <div ref={Services} className="services">
         <Container>
           <div class="section-title">
             <h2>Services</h2>
@@ -350,20 +363,20 @@ const Landingpagecontects = () => {
               <div className="footer-content-2">
                 <h4>Useful Links</h4>
                 <ul>
-                  <li>
+                  <li  onClick={() => handleLinkClick(Home)}>
                     <KeyboardArrowRightIcon
                       sx={{ fontSize: "1.1rem", marginRight: "5px" }}
                     />
                     Home
                   </li>
-                  <li>
+                  <li onClick={() => handleLinkClick(About)}>
                     {" "}
                     <KeyboardArrowRightIcon
                       sx={{ fontSize: "1.1rem", marginRight: "5px" }}
                     />
                     About{" "}
                   </li>
-                  <li>
+                  <li onClick={() => handleLinkClick(Services)}>
                     {" "}
                     <KeyboardArrowRightIcon
                       sx={{ fontSize: "1.1rem", marginRight: "5px" }}
@@ -418,6 +431,34 @@ const Landingpagecontects = () => {
           </Container>
         </div>
       </div>
+      <Dialog   open={open}
+    onClose={handleClose} >
+    <DialogTitle sx={{fontFamily:"Poppins-SemiBold"}} >Contact Us</DialogTitle>
+    <DialogContent>
+      <DialogContentText id="alert-dialog-description">
+      <div style={{display:"flex" ,flexDirection:"column",gap:"10px"}}>
+        
+      <TextField className="contactusform "label="Full Name" size="small"/>
+      <TextField className="contactusform " label="Email" size="small"/>
+      <TextField className="contactusform " label="Number" size="small"/>
+      <TextField
+      className="contactusform "
+      size="small"
+      id="outlined-multiline-static"
+      label="Message"
+      multiline
+      rows={4}
+    />
+      </div>
+      </DialogContentText>
+    </DialogContent>
+    <DialogActions>
+      <Button onClick={handleClose}>cancel</Button>
+      <button className="sumbit-contactus" onClick={handleClose} autoFocus>
+        Submit
+      </button>
+    </DialogActions>
+  </Dialog>
     </div>
   );
 };
