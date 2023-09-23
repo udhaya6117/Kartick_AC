@@ -21,9 +21,10 @@ import { motion } from "framer-motion";
 const Landingpagecontects = () => {
   return (
     <div>
-      <div style={{ paddingTop: "75px" }}>
+      <div className="hero-top-maincontect" style={{ paddingTop: "75px",width:"100%" }}>
         <div className="hero-img">
-          <div class="hero-container">
+          <div className="hero-container">
+           
             <motion.h1
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
@@ -58,6 +59,7 @@ const Landingpagecontects = () => {
             >
               Get Started
             </motion.button>
+           
           </div>
         </div>
         <div className="whatsapp">
@@ -137,7 +139,9 @@ const Landingpagecontects = () => {
               }}
               className="about-box-2"
             >
+              <div>
               <img src={aboutsimg} />
+              </div>
             </motion.div>
           </div>
         </Container>
@@ -405,7 +409,7 @@ const Landingpagecontects = () => {
         <div className="footer-2-color">
           <Container>
             <div className="footer-box-split-2">
-              <div>
+              <div style={{textAlign:"center"}}>
                 <span style={{ color: "#e03a3c" }}>©</span> Copyright{" "}
                 <span style={{ color: "#e03a3c" }}>HOME SERVICE</span>. All
                 Rights Reserved
