@@ -161,18 +161,25 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
       </div>
       <div className="points-box">
         <Container>
-          <p
+          <motion.p
             style={{
               textAlign: "center",
               fontFamily: "Poppins-Regular",
               color: "white",
             }}
+            initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 2.1,
+                delay: 1.5,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
           >
             We're dedicated to bringing your appliances back to life, one home
             at a time. Contact [Your Company Name] today to schedule your
             appliance repair service and experience the difference of having
             true home appliance repair experts on your side.
-          </p>
+          </motion.p>
           <div className="points-box-split">
             <div>
               <AcUnitIcon
