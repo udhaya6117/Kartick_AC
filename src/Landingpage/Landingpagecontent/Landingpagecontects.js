@@ -1,4 +1,13 @@
-import { Button, Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField } from "@mui/material";
+import {
+  Button,
+  Container,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  TextField,
+} from "@mui/material";
 import React, { useState } from "react";
 import DoneAllIcon from "@mui/icons-material/DoneAll";
 import aboutsimg from "../../../src/img/aboutus-img.jpg";
@@ -18,10 +27,7 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { motion } from "framer-motion";
 
-
-
-
-const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
+const Landingpagecontects = ({ Home, About, Services, handleLinkClick }) => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -33,10 +39,13 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
   };
   return (
     <div>
-      <div ref={Home} className="hero-top-maincontect" style={{ paddingTop: "75px",width:"100%" }}>
+      <div
+        ref={Home}
+        className="hero-top-maincontect"
+        style={{ paddingTop: "75px", width: "100%" }}
+      >
         <div className="hero-img">
           <div className="hero-container">
-           
             <motion.h1
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
@@ -62,6 +71,7 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
             <motion.button
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.8 }}
               transition={{
                 duration: 2.1,
                 delay: 1.6,
@@ -72,7 +82,6 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
             >
               Get Started
             </motion.button>
-           
           </div>
         </div>
         <div className="whatsapp">
@@ -94,10 +103,11 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
             <motion.div
               className="about-box-1"
               initial={{ opacity: 0, x: -100 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{
-                duration: 2.1,
-                delay: 0.9,
+                duration: 0.9,
+                delay: 0.2,
                 ease: [0, 0.71, 0.2, 1.01],
               }}
             >
@@ -144,16 +154,17 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{
                 duration: 2.5,
-                delay: 1.2,
+                delay: 0.5,
                 ease: [0, 0.71, 0.2, 1.01],
               }}
               className="about-box-2"
             >
               <div>
-              <img src={aboutsimg} />
+                <img src={aboutsimg} />
               </div>
             </motion.div>
           </div>
@@ -168,12 +179,13 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
               color: "white",
             }}
             initial={{ opacity: 0, x: -100 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                duration: 2.1,
-                delay: 1.5,
-                ease: [0, 0.71, 0.2, 1.01],
-              }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{
+              duration: 0.9,
+              delay: 0.3,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
           >
             We're dedicated to bringing your appliances back to life, one home
             at a time. Contact [Your Company Name] today to schedule your
@@ -181,7 +193,16 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
             true home appliance repair experts on your side.
           </motion.p>
           <div className="points-box-split">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{
+                duration: 0.9,
+                delay: 0.6,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+            >
               <AcUnitIcon
                 className="points-icon"
                 sx={{ color: "#e03a3c", fontSize: 40 }}
@@ -191,8 +212,17 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
                 From cooling issues to strange noises, we can diagnose and fix
                 it all.
               </p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{
+                duration: 0.9,
+                delay: 0.9,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+            >
               <AdminPanelSettingsIcon
                 className="points-icon"
                 sx={{ color: "#e03a3c", fontSize: 40 }}
@@ -202,8 +232,17 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
                 Whether it's a front-loader or a top-loader, we'll have your
                 washing machine working flawlessly.
               </p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{
+                duration: 0.9,
+                delay: 1.2,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+            >
               <AlignVerticalBottomIcon
                 className="points-icon"
                 sx={{ color: "#e03a3c", fontSize: 40 }}
@@ -213,8 +252,17 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
                 We handle electric and gas ovens, stovetops, and ranges with
                 precision.
               </p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{
+                duration: 0.9,
+                delay: 1.5,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+            >
               <BusinessCenterIcon
                 className="points-icon"
                 sx={{ color: "#e03a3c", fontSize: 40 }}
@@ -224,8 +272,17 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
                 Say goodbye to the pile of dirty dishes. We'll get your
                 dishwasher back to its efficient self.
               </p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{
+                duration: 0.9,
+                delay: 1.8,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+            >
               <AssistantPhotoIcon
                 className="points-icon"
                 sx={{ color: "#e03a3c", fontSize: 40 }}
@@ -235,8 +292,17 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
                 Your clothes will be dry and fresh once again with our dryer
                 repair services.
               </p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{
+                duration: 0.9,
+                delay: 2.1,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+            >
               <BrowseGalleryIcon
                 className="points-icon"
                 sx={{ color: "#e03a3c", fontSize: 40 }}
@@ -246,21 +312,41 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
                 Don't let a malfunctioning microwave slow you down. We'll make
                 it cook and heat like it should.
               </p>
-            </div>
+            </motion.div>
           </div>
         </Container>
       </div>
       <div ref={Services} className="services">
         <Container>
-          <div class="section-title">
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{
+              duration: 0.9,
+              delay: 0.3,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+            class="section-title"
+          >
             <h2>Services</h2>
             <p>Check our Services</p>
-          </div>
+          </motion.div>
         </Container>
         <div className="services-boxes-contect">
           <Container>
             <div className="services-boxes-splits">
-              <div className="card">
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{
+                  duration: 1.5,
+                  delay: 0.3,
+                  ease: [0, 0.71, 0.2, 1.01],
+                }}
+                className="card"
+              >
                 <div className="card-img">
                   <img src={cardimg1} alt="" />
                 </div>
@@ -276,8 +362,18 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
                     benefits of professional installation.
                   </p>
                 </div>
-              </div>
-              <div className="card">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{
+                  duration: 1.5,
+                  delay: 0.5,
+                  ease: [0, 0.71, 0.2, 1.01],
+                }}
+                className="card"
+              >
                 <div className="card-img">
                   <img src={cardimg2} alt="" />
                 </div>
@@ -292,8 +388,15 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
                     improve energy efficiency and reduce environmental impact.
                   </p>
                 </div>
-              </div>
-              <div className="card">
+              </motion.div>
+              <motion.div  initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{
+                  duration: 1.5,
+                  delay: 0.8,
+                  ease: [0, 0.71, 0.2, 1.01],
+                }}className="card">
                 <div className="card-img">
                   <img src={cardimg3} alt="" />
                 </div>
@@ -309,7 +412,7 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
                     emergency medical response.
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </Container>
         </div>
@@ -370,7 +473,7 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
               <div className="footer-content-2">
                 <h4>Useful Links</h4>
                 <ul>
-                  <li  onClick={() => handleLinkClick(Home)}>
+                  <li onClick={() => handleLinkClick(Home)}>
                     <KeyboardArrowRightIcon
                       sx={{ fontSize: "1.1rem", marginRight: "5px" }}
                     />
@@ -429,7 +532,7 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
         <div className="footer-2-color">
           <Container>
             <div className="footer-box-split-2">
-              <div style={{textAlign:"center"}}>
+              <div style={{ textAlign: "center" }}>
                 <span style={{ color: "#e03a3c" }}>©</span> Copyright{" "}
                 <span style={{ color: "#e03a3c" }}>HOME SERVICE</span>. All
                 Rights Reserved
@@ -438,34 +541,48 @@ const Landingpagecontects = ({ Home, About, Services,handleLinkClick }) => {
           </Container>
         </div>
       </div>
-      <Dialog   open={open}
-    onClose={handleClose} >
-    <DialogTitle sx={{fontFamily:"Poppins-SemiBold"}} >Contact Us</DialogTitle>
-    <DialogContent>
-      <DialogContentText id="alert-dialog-description">
-      <div style={{display:"flex" ,flexDirection:"column",gap:"10px"}}>
-        
-      <TextField className="contactusform "label="Full Name" size="small"/>
-      <TextField className="contactusform " label="Email" size="small"/>
-      <TextField className="contactusform " label="Number" size="small"/>
-      <TextField
-      className="contactusform "
-      size="small"
-      id="outlined-multiline-static"
-      label="Message"
-      multiline
-      rows={4}
-    />
-      </div>
-      </DialogContentText>
-    </DialogContent>
-    <DialogActions>
-      <Button onClick={handleClose}>cancel</Button>
-      <button className="sumbit-contactus" onClick={handleClose} autoFocus>
-        Submit
-      </button>
-    </DialogActions>
-  </Dialog>
+      <Dialog open={open} onClose={handleClose}>
+        <DialogTitle sx={{ fontFamily: "Poppins-SemiBold" }}>
+          Contact Us
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "10px" }}
+            >
+              <TextField
+                className="contactusform "
+                label="Full Name"
+                size="small"
+              />
+              <TextField
+                className="contactusform "
+                label="Email"
+                size="small"
+              />
+              <TextField
+                className="contactusform "
+                label="Number"
+                size="small"
+              />
+              <TextField
+                className="contactusform "
+                size="small"
+                id="outlined-multiline-static"
+                label="Message"
+                multiline
+                rows={4}
+              />
+            </div>
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>cancel</Button>
+          <button className="sumbit-contactus" onClick={handleClose} autoFocus>
+            Submit
+          </button>
+        </DialogActions>
+      </Dialog>
     </div>
   );
 };
