@@ -85,16 +85,18 @@ const Landingpagecontects = ({ Home, About, Services, handleLinkClick }) => {
           </div>
         </div>
         <div className="whatsapp">
+          <a href="//api.whatsapp.com/send?phone=919360880958&text=WHATEVER_LINK_OR_TEXT_YOU_WANT_TO_SEND">
           <WhatsAppIcon
             sx={{
-              color: "#008361",
+              color: "white",
               fontSize: 40,
               cursor: "pointer",
-              backgroundColor: "white",
+              backgroundColor: "#008361",
               padding: "5px",
               borderRadius: "5px",
             }}
           />
+          </a>
         </div>
       </div>
       <div ref={About} className="Aboutus">
