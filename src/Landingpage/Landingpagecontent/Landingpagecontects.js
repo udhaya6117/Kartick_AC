@@ -55,7 +55,7 @@ const Landingpagecontects = ({ Home, About, Services, handleLinkClick }) => {
                 ease: [0, 0.71, 0.2, 1.01],
               }}
             >
-              Bettter digital <br></br>experience with Presento
+              AC Installation and uninstallation services
             </motion.h1>
             <motion.h2
               initial={{ opacity: 0, y: 100 }}
@@ -66,9 +66,9 @@ const Landingpagecontects = ({ Home, About, Services, handleLinkClick }) => {
                 ease: [0, 0.71, 0.2, 1.01],
               }}
             >
-              We are team of talented designers making websites with Bootstrap
+                AC runs efficiently, providing comfort and energy savings.<br></br> Installation 1499 & Uninstallation 499
             </motion.h2>
-            <motion.button
+            <motion.a 
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.8 }}
@@ -78,10 +78,10 @@ const Landingpagecontects = ({ Home, About, Services, handleLinkClick }) => {
                 ease: [0, 0.71, 0.2, 1.01],
               }}
               class="btn"
-              onClick={handleClickOpen}
+              href="tel:+91 9360880958"
             >
-              Get Started
-            </motion.button>
+              call Us
+            </motion.a>
           </div>
         </div>
         <div className="whatsapp">
@@ -114,7 +114,7 @@ const Landingpagecontects = ({ Home, About, Services, handleLinkClick }) => {
               }}
             >
               <h3>
-                Welcome to [Your Company Name] - Your Home Appliance Repair
+                Welcome to [Karthi Home Service] - Your Home Appliance Repair
                 Experts!
               </h3>
               <p>Bringing Your Appliances Back to Life, One Home at a Time</p>
@@ -145,7 +145,7 @@ const Landingpagecontects = ({ Home, About, Services, handleLinkClick }) => {
                 </li>
               </ul>
               <p className="aboutus-contecnt-box-1">
-                At [Your Company Name], we understand the importance of
+                At [Karthi Home Service], we understand the importance of
                 functional home appliances in your daily life. When your
                 appliances break down, it can disrupt your routine and cause
                 inconvenience. That's where we come in! With our team of skilled
@@ -448,7 +448,7 @@ const Landingpagecontects = ({ Home, About, Services, handleLinkClick }) => {
                   >
                     Phone:
                   </span>{" "}
-                  9360880958
+                 <a style={{textDecoration:"none",cursor:"pointer",color: "#e03a3c",}} href="tel:+91 9360880958">9360880958</a> 
                 </p>
                 <p
                   style={{
@@ -467,7 +467,7 @@ const Landingpagecontects = ({ Home, About, Services, handleLinkClick }) => {
                   >
                     Email:
                   </span>{" "}
-                  wdqwdqw
+                 <a style={{color:"#e03a3c",cursor:"pointer",textDecoration:"none"}} href="mailto:Karthiking221@gmail.com">Karthiking221@gmail.com</a> 
                 </p>
               </div>
             </div>

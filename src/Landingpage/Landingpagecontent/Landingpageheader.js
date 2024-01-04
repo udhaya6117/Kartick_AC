@@ -21,6 +21,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import DehazeIcon from "@mui/icons-material/Dehaze";
+import logo from "../../img/Home Service-02 1.png"
 
 const pages = ["Home", "About", "Services"];
 
@@ -62,13 +63,16 @@ const Landingpageheader = ({ Home, About, Services,handleLinkClick }) => {
       >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <AdbIcon
+            {/* <AdbIcon
               sx={{
                 display: "flex",
                 mr: 1,
                 color: "#e03a3c",
               }}
-            />
+            /> */}
+            <div className="logo">
+              <img src={logo} />
+            </div>
             <Typography
               variant="h6"
               component="a"
@@ -109,36 +113,19 @@ const Landingpageheader = ({ Home, About, Services,handleLinkClick }) => {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <MenuItem key={page} className="menubar-btn" onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
                 ))}
-                <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" onClick={handleClickOpen}>
+                <MenuItem  onClick={handleCloseNavMenu}>
+                  <a href="tel:+91 9360880958" className="menubar-btn" textAlign="center" onClick={handleClickOpen}>
                     Contact us
-                  </Typography>
+                  </a>
                 </MenuItem>
               </Menu>
             </Box>
-            <AdbIcon sx={{ display: "flex", mr: 1 }} />
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                display: "flex",
-                flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            >
-              HOME SERVICE
-            </Typography>
+           
+           
             <Box
               className="header-btn-simple"
               sx={{
@@ -188,9 +175,9 @@ const Landingpageheader = ({ Home, About, Services,handleLinkClick }) => {
             </Box>
 
             <div style={{ display: "flex" }}>
-              <button className="header-btn" onClick={handleClickOpen}>
-                Contant Us
-              </button>
+              <a href="tel:+91 9360880958" className="header-btn">
+                Call Us
+              </a>
             </div>
             <div>
               <div
@@ -205,48 +192,7 @@ const Landingpageheader = ({ Home, About, Services,handleLinkClick }) => {
           </Toolbar>
         </Container>
       </AppBar>
-      <Dialog open={open} onClose={handleClose}>
-        <DialogTitle sx={{ fontFamily: "Poppins-SemiBold" }}>
-          Contact Us
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            <div
-              style={{ display: "flex", flexDirection: "column", gap: "10px" }}
-            >
-              <TextField
-                className="contactusform "
-                label="Full Name"
-                size="small"
-              />
-              <TextField
-                className="contactusform "
-                label="Email"
-                size="small"
-              />
-              <TextField
-                className="contactusform "
-                label="Number"
-                size="small"
-              />
-              <TextField
-                className="contactusform "
-                size="small"
-                id="outlined-multiline-static"
-                label="Message"
-                multiline
-                rows={4}
-              />
-            </div>
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose}>cancel</Button>
-          <button className="sumbit-contactus" onClick={handleClose} autoFocus>
-            Submit
-          </button>
-        </DialogActions>
-      </Dialog>
+      
     </div>
   );
 };

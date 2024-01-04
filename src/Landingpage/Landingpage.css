@@ -1,3 +1,16 @@
+.logo{
+  width: 55px;
+}
+.logo img {
+  width: 100%;
+}
+
+.menubar-btn:hover{
+background-color: #fff !important;
+color: #e03a3c !important;
+text-decoration: none !important;
+}
+
 .header-btn {
   margin-left: 20px;
   background: #e03a3c;
@@ -12,6 +25,7 @@
   display: inline-block;
   font-family: "Poppins-Regular";
   cursor: pointer;
+  text-decoration: none;
 }
 .header-btn:hover {
   background: transparent;
@@ -50,7 +64,7 @@
 
 .hero-img h1 {
   margin: 0;
-  font-size: 48px;
+  font-size: 38px;
   font-weight: 700;
   color: #fff;
   font-family: "Poppins-Bold";
@@ -59,7 +73,7 @@
 .hero-img h2 {
   color: #fff;
   margin: 10px 0 0 0;
-  font-size: 24px;
+  font-size: 17px;
   font-family: "Poppins-SemiBold";
 }
 
@@ -72,11 +86,12 @@
   padding: 10px 30px;
   border-radius: 4px;
   transition: 0.5s;
-  margin-top: 30px;
+  margin-top: 20px;
   color: #fff;
   background: #e03a3c;
   border: 2px solid #e03a3c;
   font-family: "Poppins-Regular";
+  text-decoration: none;
 }
 
 .hero-img .btn:hover {
